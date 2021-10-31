@@ -1,0 +1,24 @@
+package spring.di;
+
+import spring.di.entity.Exam;
+import spring.di.entity.NewlecExam;
+import spring.di.ui.ExamConsole;
+import spring.di.ui.InlineExamConsole;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Exam exam = new NewlecExam();
+		
+		// 1. inline 형식으로 출력(한 줄로 출력)
+		//ExamConsole console = new InlineExamConsole(exam);
+		
+		// 2.
+		ExamConsole console = new GridExamConsole(exam);
+		// 
+		
+		console.print();
+		
+	}
+
+}
